@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1aa" sequence="6" unid="75BDE251B5C8D03F80257E8F004D9AA4">
+<created><datetime dst="true">20150727T150738,60+01</datetime></created>
+<modified><datetime>20160126T220101,33+00</datetime></modified>
+<revised><datetime>20160126T220101,32+00</datetime></revised>
+<lastaccessed><datetime>20160126T220101,33+00</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150811T135002,19+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=2a9b1c12-5207-47a9-a25f-3740a5b56323/OU=vcap/O=vcap</name><name>CN=vcap/O=vcap</name><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name></updatedby>
+<item name="$TITLE"><text>watson2.png</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+<item name="$MimeType" sign="true"><text>image/png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20150122T153415,51+00</datetime></item>
+<item name="$ImageNames" sign="true"><text>watson2.png</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item>
+<item name="$EditFilePath" sign="true"><text>C:\Users\IBM_AD~1\AppData\Local\Temp\notes90C43B\~watson2.png</text></item>
+<item name="$Flags"><text>34CiQ$</text></item></note>

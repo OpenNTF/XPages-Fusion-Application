@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.beforePageLoad><![CDATA[#{javascript:
+		viewScope.textError = false;
+		viewScope.combosError = false;
+		viewScope.combosErrorMsg = "";
+		viewScope.detectSuccess = null;
+	}]]></xp:this.beforePageLoad>
+	<xc:layout>
+		<xp:panel id="mainPanel" styleClass="col-lg-10 col-md-12 col-sm-12">
+			<xp:div styleClass="jumbotron" style="text-align:center;padding:10px 20px;">
+				<h2>IBM XPages and Watson Language Analytics</h2><xp:br />
+				<p> The IBM Language Translation service allows for language detection as well as translation.
+				    Enter some text in the first text area, choose/detect your origin language and choose your translation language,
+				    then click on the Translate button.
+				</p>
+				<p><a target="_blank" class="btn btn-primary btn-lg" href="https://www.ng.bluemix.net/docs/services/WatsonLanguageTranslation/index.html"
+					  role="button">Watson Language Translation Documentation</a>
+				</p>
+			</xp:div>
+			
+			<xp:panel id="watsonContent" styleClass="row" style="margin:0px;">
+				<xp:panel id="panel6" styleClass="panel panel-default col-md-12 col-sm-12 col-lg-12">
+					<xp:panel id="panel2" styleClass="row" style="padding-top:10px;">
+						<xp:panel id="comboPanel" styleClass="col-md-6 col-sm-12" style="vertical-align:middle;min-height:36px;">
+							<xp:label value="Origin:" id="label4" style="float:left;width:25%;padding-top:4px;"></xp:label>
+							<xp:comboBox id="originCombo" style="float:left;width:75%;margin-bottom:4px;">
+								<xp:selectItem itemLabel="Select..." itemValue=""></xp:selectItem>
+								<xp:selectItem itemLabel="English" itemValue="en"></xp:selectItem>
+								<xp:selectItem itemLabel="French" itemValue="fr"></xp:selectItem>
+								<xp:selectItem itemLabel="Spanish" itemValue="es"></xp:selectItem>
+								<xp:selectItem itemLabel="Portuguese" itemValue="pt"></xp:selectItem>
+							</xp:comboBox>
+						</xp:panel>
+						<xp:div styleClass="col-md-6 col-sm-12" style="vertical-align:middle;min-height:36px;">
+							<xp:label value="Translate To:" id="label5" style="float:left;width:25%;padding-top:4px;"></xp:label>
+							<xp:comboBox id="transCombo" style="float:left;width:75%;margin-bottom:4px;">
+								<xp:selectItem itemLabel="Select..." itemValue=""></xp:selectItem>
+								<xp:selectItem itemLabel="English" itemValue="en"></xp:selectItem>
+								<xp:selectItem itemLabel="French" itemValue="fr"></xp:selectItem>
+								<xp:selectItem itemLabel="Spanish" itemValue="es"></xp:selectItem>
+								<xp:selectItem itemLabel="Portuguese" itemValue="pt"></xp:selectItem>
+							</xp:comboBox>
+						</xp:div>
+						<xp:div styleClass="col-md-12 col-sm-12" style="text-align:center;padding-top: 10px;min-height:36px;">
+							<xp:button value="Detect Language" id="detectBtn">
+								<xp:div id="detectBtnLoading" styleClass="hidden glyphicon glyphicon-repeat"></xp:div>
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="watsonContent">
+									<xp:this.script><![CDATA[
+										// Get ref to detectBtn
+										// toggle hide and spin CSS classes
+										var loadingDiv = x$("#{id:detectBtnLoading}");
+										loadingDiv.toggleClass("hidden spin");
+										return true;
+										]]>
+									</xp:this.script>
+									<xp:this.action><![CDATA[#{javascript:
+										// Get text and combobox values
+										var text = getComponent("textContent").getValue();
+										var originCombo = getComponent("originCombo");
+										var origin = originCombo.getValue();
+										
+										if(text != "") {
+											viewScope.textError = false;
+											
+											// Clean up text before sending to Watson
+											var newText = text.trim();
+											
+											if(null != newText && newText != "") {
+												// Send detect language request
+												var result = translate.detectLanguage(newText);
+												
+												if(result != ""){
+													// Set appropriate language in combobox
+													if(result.startsWith("en")) {
+														viewScope.detectSuccess = "English";
+														originCombo.setValue("en");
+													}else if(result.startsWith("fr")) {
+														viewScope.detectSuccess = "French";
+														originCombo.setValue("fr");
+													}else if(result.startsWith("es")) {
+														viewScope.detectSuccess = "Spanish";
+														originCombo.setValue("es");
+													}else if(result.startsWith("pt")) {
+														viewScope.detectSuccess = "Portuguese";
+														originCombo.setValue("pt");
+													}else{
+														viewScope.detectSuccess = false;
+													}
+												}
+											}
+										}else{
+											// No text to detect language, display error
+											viewScope.textError = true;
+										}}]]>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+							<xp:button value="Translate" id="button1">
+								<xp:div id="transBtnLoading" styleClass="hidden glyphicon glyphicon-repeat"></xp:div>
+								<xp:eventHandler event="onclick" submit="true" refreshMode="partial" refreshId="watsonContent">
+									<xp:this.script><![CDATA[
+										// Get ref to detectBtn
+										// toggle hide and spin CSS classes
+										var loadingDiv = x$("#{id:transBtnLoading}");
+										loadingDiv.toggleClass("hidden spin");
+										return true;
+										]]>
+									</xp:this.script>
+									<xp:this.action><![CDATA[#{javascript:
+										var text = getComponent("textContent").getValue();
+										var transText = getComponent("translateContent");
+										var origin = getComponent("originCombo").getValue();
+										var target = getComponent("transCombo").getValue();
+										
+										if(origin == "" || target == "") {
+											viewScope.combosError = true;
+											viewScope.combosErrorMsg = "Choose origin and translation languages in the dropdowns.";
+										}else if (origin == target) {
+											viewScope.combosError = true;
+											viewScope.combosErrorMsg = "Origin and translation languages can't be the same.";
+										//}else if (origin != "en" && target != "en") {
+										//	viewScope.combosError = true;
+										//	viewScope.combosErrorMsg = "Invalid language translation combination.";
+										}else{
+											viewScope.combosError = false;
+											viewScope.combosErrorMsg = "";
+										}
+										if(!viewScope.combosError) {
+											var newText = text.trim();
+											if(null != newText && newText != "") {
+												viewScope.textError = false;
+												var result = translate.getTranslation(newText, origin, target);
+												transText.setValue(result);
+											}else{
+												viewScope.textError = true;
+											}
+										}}]]>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+							<xp:button value="Paste Sample Text" id="button2">
+								<xp:eventHandler event="onclick" submit="false">
+									<xp:this.script><![CDATA[
+										var pasteText = "Call me Ishmael. Some years ago - never mind how long precisely - having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.";
+										document.getElementById("#{id:textContent}").value = pasteText;
+										]]>
+									</xp:this.script>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:div>
+						<xp:div styleClass="col-md-12 col-sm-12" style="text-align:center;padding-top: 10px;">
+							<xp:div styleClass="text-danger" id="comboError" style="padding:5px 10px;">
+								<xp:this.rendered><![CDATA[#{javascript:return viewScope.combosError;}]]></xp:this.rendered>
+								<xp:div>
+									<xp:div styleClass="glyphicon glyphicon-remove" style="top:2px;"></xp:div>
+									<xp:label id="errorLabel">
+										<xp:this.value><![CDATA[#{javascript:return viewScope.combosErrorMsg;}]]></xp:this.value>
+									</xp:label>
+								</xp:div>
+							</xp:div>
+							<xp:div styleClass="text-danger" id="textError" style="padding:5px 10px;">
+								<xp:this.rendered><![CDATA[#{javascript:return viewScope.textError;}]]></xp:this.rendered>
+								<xp:div>
+									<xp:div styleClass="glyphicon glyphicon-remove" style="top:2px;"></xp:div>
+									<xp:label value="Enter some text in the first text area below." id="label6"></xp:label>
+								</xp:div>
+							</xp:div>
+							<xp:div styleClass="text-success" id="div1" style="padding:5px 10px;">
+								<xp:this.rendered><![CDATA[#{javascript:return (null != viewScope.detectSuccess && viewScope.detectSuccess != false);}]]></xp:this.rendered>
+								<xp:div>
+									<xp:div styleClass="glyphicon glyphicon-ok"></xp:div>
+									<xp:label id="label7">
+										<xp:this.value><![CDATA[#{javascript:return "Detected language: " + viewScope.detectSuccess;}]]></xp:this.value>
+									</xp:label>
+								</xp:div>
+							</xp:div>
+							<xp:div styleClass="text-danger" id="div2" style="padding:5px 10px;">
+								<xp:this.rendered><![CDATA[#{javascript:return (null != viewScope.detectSuccess && viewScope.detectSuccess == false);}]]></xp:this.rendered>
+								<xp:div>
+									<xp:div styleClass="glyphicon glyphicon-remove" style="top:2px;"></xp:div>
+									<xp:label value="Error occured detecting language." id="label8"></xp:label>
+								</xp:div>
+							</xp:div>
+						</xp:div>
+					</xp:panel>
+					<xp:br />
+					<xp:panel id="originPanel">
+						<xp:label value="Original Text:" id="label3"></xp:label>
+						<xp:inputTextarea id="textContent" rows="6"></xp:inputTextarea>
+						<xp:br />
+					</xp:panel>
+					<xp:panel id="transPanel">
+						<xp:label value="Translated Text:" id="label2"></xp:label>
+						<xp:inputTextarea id="translateContent" rows="6"></xp:inputTextarea>
+						<xp:br />
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+		</xp:panel>
+	</xc:layout>
+</xp:view>

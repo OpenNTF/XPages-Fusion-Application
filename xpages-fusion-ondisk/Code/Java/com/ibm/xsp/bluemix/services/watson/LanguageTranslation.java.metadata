@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="196" sequence="158" unid="3B37B0DC2DD137DE80257E8F003DAD16">
+<created><datetime dst="true">20150727T121340,06+01</datetime></created>
+<modified><datetime>20160126T220100,86+00</datetime></modified>
+<revised><datetime>20160126T220100,85+00</datetime></revised>
+<lastaccessed><datetime>20160126T220100,86+00</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150811T135002,09+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name></updatedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>com/ibm/xsp/bluemix/services/watson/LanguageTranslation.java</text></item>
+
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>com/ibm/xsp/bluemix/services/watson/LanguageTranslation.java</text></item>
+
+</note>

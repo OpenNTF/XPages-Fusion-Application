@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2b6" sequence="5" unid="53F3AEF0290F065C80257F4100722885">
+<created><datetime>20160121T204654,77+00</datetime></created>
+<modified><datetime>20160126T220100,98+00</datetime></modified>
+<revised><datetime>20160126T220100,97+00</datetime></revised>
+<lastaccessed><datetime>20160126T220100,98+00</datetime></lastaccessed>
+<addedtofile><datetime>20160121T204654,78+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name></updatedby>
+<item name="$TITLE"><text>fluent-hc-4.3.6.jar</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item>
+<item name="$Flags"><text>34567Cg~,</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>fluent-hc-4.3.6.jar</text></item></note>

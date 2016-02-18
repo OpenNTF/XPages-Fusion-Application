@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xc:layout>
+		<xp:panel id="mainPanel" xp:key="content" styleClass="col-md-10 col-sm-12">
+			<xp:div styleClass="jumbotron" style="text-align:center;padding:10px 20px;">
+				<h1>IBM XPages Bluemix Fusion Demo</h1><xp:br />
+				<p> 
+					<xp:image url="/xpages_120x120.png" id="image1" width="100px" height="100px" style="margin-right:30px;"></xp:image>
+					<xp:image url="/watson2.png" id="image2" width="100px" height="100px" styleClass="img-circle"
+								  style="background-color:#428bca;margin-left:30px;"></xp:image>
+				</p>
+				<xp:br/>
+				<p> This XPages example application running on Bluemix uses a number of different services available from the Bluemix catalog.
+					<xp:br/>Use the navigation menu on the left of the application to access the different demo pages.
+				</p>
+			</xp:div>
+		</xp:panel>
+	</xc:layout>
+</xp:view>

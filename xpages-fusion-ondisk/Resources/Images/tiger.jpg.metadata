@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="222" sequence="4" unid="B4E39BC41C093C3780257F240071BB24">
+<created><datetime>20151223T204214,76+00</datetime></created>
+<modified><datetime>20160126T220101,27+00</datetime></modified>
+<revised><datetime>20160126T220101,26+00</datetime></revised>
+<lastaccessed><datetime>20160126T220101,27+00</datetime></lastaccessed>
+<addedtofile><datetime>20151223T204214,80+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name></updatedby>
+<item name="$TITLE"><text>tiger.jpg</text></item>
+<item name="$Flags"><text>D34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+
+
+<item name="$MimeType" sign="true"><text>image/jpeg</text></item>
+<item name="$FileModDT" sign="true"><datetime>20151223T204125,23+00</datetime></item>
+<item name="$ImageNames" sign="true"><text>tiger.jpg</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>

@@ -1,0 +1,14 @@
+<theme extends="Bootstrap3.2.0_flat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd" >
+	<resource>
+		<content-type>text/css</content-type>
+		<href>customStyles.css</href>
+	</resource>
+	
+	<control override="false">
+  		<name>ViewRoot</name>
+  			<property>
+   				<name>pageTitle</name>
+   				<value>XPages Bluemix Fusion</value>
+  			</property>
+ </control>
+</theme>
