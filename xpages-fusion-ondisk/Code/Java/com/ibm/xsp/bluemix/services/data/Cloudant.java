@@ -9,8 +9,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.faces.context.FacesContext;
-
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpResponse;
@@ -24,7 +22,6 @@ import com.ibm.commons.util.io.json.JsonJavaArray;
 import com.ibm.commons.util.io.json.JsonJavaObject;
 import com.ibm.xsp.bluemix.util.BluemixContextUtil;
 import com.ibm.xsp.bluemix.util.RestUtil;
-import com.ibm.xsp.designer.context.XSPContext;
 
 /**
  * Utility bean for using the Bluemix Cloudant database service
@@ -100,10 +97,10 @@ public class Cloudant {
 				List<JsonJavaObject> rows = getView("booklist", "documents", "all");
 				
 				if(null == rows || rows.size() < 2) {
-					XSPContext context = XSPContext.getXSPContext(FacesContext.getCurrentInstance());
-					String filePath = context.getUrl().getAddress().replace("cloudant.xsp", "") + "catcherintherye.jpg";
-					String contentType = "image/jpeg";
-					insertDoc("booklist", "Catcher in the Rye", "J.D. Salinger", false, filePath, contentType);
+					//XSPContext context = XSPContext.getXSPContext(FacesContext.getCurrentInstance());
+					//String filePath = context.getUrl().getAddress().replace("cloudant.xsp", "") + "catcherintherye.jpg";
+					//String contentType = "image/jpeg";
+					insertDoc("booklist", "Catcher in the Rye", "J.D. Salinger", false);
 				}
 				return "success";
 			}
