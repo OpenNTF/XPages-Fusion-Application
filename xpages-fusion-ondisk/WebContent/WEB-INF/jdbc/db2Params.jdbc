@@ -1,0 +1,6 @@
+<jdbc type="dbcp">
+	<driver>com.ibm.db2.jcc.DB2Driver</driver>
+	<url>jdbc:db2://75.126.155.153:50000/SQLDB</url>
+	<user>user06268</user>
+	<password>7HWj0sHIMKds</password>
+</jdbc>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	
+	<xp:this.beforeRenderResponse><![CDATA[#{javascript:
+		//Initialise the variable counting how many times the audio code is run
+		sessionScope.loadCount = 0;
+	}]]></xp:this.beforeRenderResponse>
+	<xc:layout>
+		<xp:panel id="mainPanel" styleClass="col-md-10 col-sm-12">
+			<xp:div styleClass="jumbotron" style="text-align:center;padding:10px 20px;">
+				<h2>IBM XPages and Watson Text-to-Speech</h2><xp:br />
+				<p> The IBM Text to Speech service uses IBM Watons's speech-synthesis capabilities to convert text to audio.</p>
+				<p><a target="_blank" class="btn btn-primary btn-lg" href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/text-to-speech.html"
+					  role="button">Watson Text-To-Speech Documentation</a></p>
+			</xp:div>
+			
+			<xp:div id="textSpeechContent" styleClass="row" style="text-align:center;margin:0px;">
+				<xp:panel id="panel2" styleClass="panel panel-default col-md-12 col-sm-12 col-lg-12">
+					<xp:div style="padding:10px;">
+						<xp:panel id="panel1" styleClass="row"
+							style="padding-top:10px;">
+							<xp:panel id="comboPanel"
+								styleClass="col-md-6 col-sm-12"
+								style="vertical-align:middle;">
+								<xp:comboBox id="voiceCombo" defaultValue="en-US_MichaelVoice">
+									<xp:selectItem
+										itemLabel="US English Male" itemValue="en-US_MichaelVoice">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="US English Female" itemValue="en-US_LisaVoice">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="French Female (Renee)" itemValue="fr-FR_ReneeVoice">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="UK English Female (Kate)" itemValue="en-GB_KateVoice">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="Spanish Male (Enrique)" itemValue="es-ES_EnriqueVoice">
+									</xp:selectItem>
+								</xp:comboBox>
+							</xp:panel>
+							<xp:panel id="panel5"
+								styleClass="col-md-6 col-sm-12"
+								style="vertical-align:middle;">
+								<xp:label
+									value="Choose a voice in the drop down, enter some text in the area below and click on the Text-to-Speech button."
+									id="label2">
+								</xp:label>
+							</xp:panel>
+						</xp:panel>
+					</xp:div>
+					<xp:panel id="panel3">
+						<xp:inputTextarea id="textContent" rows="6">
+						</xp:inputTextarea>
+					</xp:panel>
+					<xp:panel id="panel4" style="padding:10px;">
+						<xp:button value="Text-to-Speech" id="button1">
+							<xp:eventHandler event="onclick" submit="true">
+								<xp:this.action>
+									<![CDATA[#{javascript:
+										var text  = getComponent("textContent").getValue();
+										var voice = getComponent("voiceCombo").getValue();
+										
+										//Add the retrieved values to the sessionScope
+										//These values will be used by the playSound XPage in the hidden iframe
+										sessionScope.audioText = text;
+										sessionScope.audioVoice = voice;
+									}]]>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button value="Paste Sample Text" id="button2">
+							<xp:eventHandler event="onclick" submit="false">
+								<xp:this.script><![CDATA[
+									var pasteText = "The Text to Speech service uses IBM's speech-synthesis capabilities to convert text to audio.";
+									document.getElementById("#{id:textContent}").value = pasteText;
+									]]>
+								</xp:this.script>
+							</xp:eventHandler>
+						</xp:button>
+					</xp:panel>
+				</xp:panel>
+			</xp:div>
+		</xp:panel>
+		
+		<!-- Hidden iframe that loads and plays the watson audio content -->
+		<iframe id="iframe" class="iframe" src="#{javascript:return context.getUrl().getAddress().replace(view.getPageName(), '') + '/playSound.xsp';}" style="display:none;">
+		</iframe>
+		
+	</xc:layout>
+</xp:view>

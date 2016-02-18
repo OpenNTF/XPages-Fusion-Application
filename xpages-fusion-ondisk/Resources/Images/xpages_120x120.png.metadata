@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1ae" sequence="6" unid="A2570B345FD10CA780257E8F004DD80E">
+<created><datetime dst="true">20150727T151015,82+01</datetime></created>
+<modified><datetime>20160126T220101,45+00</datetime></modified>
+<revised><datetime>20160126T220101,44+00</datetime></revised>
+<lastaccessed><datetime>20160126T220101,45+00</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150811T135002,21+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name></updatedby>
+<item name="$TITLE"><text>xpages_120x120.png</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+<item name="$MimeType" sign="true"><text>image/png</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20150518T114958,00+01</datetime></item>
+<item name="$ImageNames" sign="true"><text>xpages_120x120.png</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>

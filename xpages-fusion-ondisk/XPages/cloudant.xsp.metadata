@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="16e" sequence="645" unid="58AF1B4D22EE7D8F80257E89005EFF45">
+<created><datetime dst="true">20150721T181737,33+01</datetime></created>
+<modified><datetime>20160126T220100,75+00</datetime></modified>
+<revised><datetime>20160126T220100,74+00</datetime></revised>
+<lastaccessed><datetime>20160126T220100,75+00</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150811T135001,89+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=IBM</name><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name></updatedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE"><text>cloudant.xsp</text></item>
+
+
+
+
+
+<item name="$FileNames" sign="true"><text>cloudant.xsp</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item>
+
+
+</note>

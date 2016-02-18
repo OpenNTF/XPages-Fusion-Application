@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	
+	<xp:eventHandler event="onClientLoad" submit="true" refreshMode="norefresh">
+		<xp:this.action><![CDATA[#{javascript:
+			viewScope.selectedImage = null;
+			viewScope.watsonTags = null;
+		}]]></xp:this.action>
+	</xp:eventHandler>
+
+	<xc:layout>
+		<xp:div id="container" styleClass="container-fluid">
+			<xp:div id="row1" styleClass="row">
+				<xp:div styleClass="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<xp:div styleClass="jumbotron" style="text-align:center;padding:10px 20px;">
+						<h2>IBM XPages and Watson Visual Recognition</h2><xp:br />
+						<p> The Visual Recognition service enables you to analyze the visual appearance of images to understand what is happening in a scene. </p>
+						<p><a target="_blank" class="btn btn-primary btn-lg" href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/visual-recognition.html" role="button">
+							Watson Visual Recognition Documentation</a>
+						</p>
+					</xp:div>
+					<xp:div id="div1" styleClass="row well" style="padding:9px;border-radius:4px;margin-right:0px;margin-left:0px;">
+						<xp:div styleClass="col-xs-12 col-md-12">
+							<h4>Select an Image</h4>
+							<hr></hr>
+						</xp:div>
+						<xp:div styleClass="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<xp:link id="link1">
+								<xp:image id="image1" url="/boston.jpg" style="max-width:90%;max-height:90%;">
+								</xp:image>
+								<xp:eventHandler event="onclick" submit="true" refreshMode="partial" refreshId="container">
+									<xp:this.action><![CDATA[#{javascript:
+										//Set the selectImage values to the selected image
+										var imageName = "/boston.jpg";
+										var imageUrl = context.getUrl().getAddress().replace(view.getPageName(), '') + "/" + imageName;
+										viewScope.selectedImage = [imageUrl, imageName];
+										
+										//Reset the watson tags
+										viewScope.watsonTags = null;
+										}]]>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:div>
+						<xp:div styleClass="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<xp:link id="link2">
+								<xp:image id="image2" url="/skiing.jpg" style="max-width:90%;max-height:90%;">
+								</xp:image>
+								<xp:eventHandler event="onclick" submit="true" refreshMode="partial" refreshId="container">
+									<xp:this.action><![CDATA[#{javascript:
+										//Set the selectImage values to the selected image
+										var imageName = "/skiing.jpg";
+										var imageUrl = context.getUrl().getAddress().replace(view.getPageName(), '') + "/" + imageName;
+										viewScope.selectedImage = [imageUrl, imageName];
+										
+										//Reset the watson tags
+										viewScope.watsonTags = null;
+										}]]>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:div>
+						<xp:div styleClass="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<xp:link id="link3">
+								<xp:image id="image3" url="/tiger.jpg" style="max-width:90%;max-height:90%;">
+								</xp:image>
+								<xp:eventHandler event="onclick" submit="true" refreshMode="partial" refreshId="container">
+									<xp:this.action><![CDATA[#{javascript:
+										//Set the selectImage values to the selected image
+										var imageName = "/tiger.jpg";
+										var imageUrl = context.getUrl().getAddress().replace(view.getPageName(), '') + "/" + imageName;
+										viewScope.selectedImage = [imageUrl, imageName];
+										
+										//Reset the watson tags
+										viewScope.watsonTags = null;
+										}]]>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:div>
+						<xp:div styleClass="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<xp:link id="link4">
+								<xp:image id="image4" url="/car.jpg" style="max-width:90%;max-height:90%;">
+								</xp:image>
+								<xp:eventHandler event="onclick" submit="true" refreshMode="partial" refreshId="container">
+									<xp:this.action><![CDATA[#{javascript:
+										//Set the selectImage values to the selected image
+										var imageName = "/car.jpg";
+										var imageUrl = context.getUrl().getAddress().replace(view.getPageName(), '') + "/" + imageName;
+										viewScope.selectedImage = [imageUrl, imageName];
+										
+										//Reset the watson tags
+										viewScope.watsonTags = null;
+										}]]>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:div>
+					</xp:div>
+				</xp:div>
+			</xp:div>
+
+			<xp:div id="imageRow" styleClass="row">
+				<xp:div id="imageHolder" styleClass="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<xp:div styleClass="well" style="max-width:500px;text-align:center;padding:9px;border-radius:4px;">
+						<xp:div id="imageIcon" styleClass="glyphicon glyphicon-picture"
+							style="font-size:72px;margin-top:30%;width:72px;height:240px;"
+							rendered="#{javascript:return !viewScope.selectedImage;}">
+						</xp:div>
+						<xp:div id="loadedImage">
+							<xp:image id="selectedImage"
+								style="max-width:100%"
+								rendered="#{javascript:return viewScope.selectedImage;}">
+								<xp:this.url><![CDATA[#{javascript:
+									if(viewScope.selectedImage[0].indexOf("cloudant") > -1){ 
+										return viewScope.selectedImage[0];
+									}else{
+										return "/" + viewScope.selectedImage[1];
+									}}]]>
+								</xp:this.url>
+							</xp:image>
+						</xp:div>
+						<xp:div id="loadedImage2">
+							<xp:image id="selectedImage2" style="max-width:100%">
+							</xp:image>
+						</xp:div>
+					</xp:div>
+				</xp:div>
+				<xp:div styleClass="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="rightCol">
+					<xp:this.rendered><![CDATA[#{javascript:
+						return null != viewScope.selectedImage;
+						}]]>
+					</xp:this.rendered>
+					<div style="margin:6px;min-height:30px;">
+						<xp:button id="analyseBtn" style="display:inline-block;padding:0px;">
+							<xp:image url="/watson_avatar.png" style="height:30px;width:30px;margin:4px 8px;">
+							</xp:image>
+							<xp:div style="display:inline;padding:9px 6px 0px 0px;">
+								Analyse Image
+							</xp:div>
+
+							<xp:eventHandler event="onclick" submit="true" refreshMode="partial" refreshId="analysis">
+								<xp:this.script><![CDATA[
+									//Show the loading splash screen, which will disappear after the partial refresh
+									var loadingPanel = x$("#{id:loadingPanel1}");
+									loadingPanel.toggleClass("hidden");
+									
+									return true;
+									]]>
+								</xp:this.script>
+								<xp:this.action><![CDATA[#{javascript:
+									var tags = null;
+									
+									//Send the image to Watson to analyse and return matching classifiers (tags)
+									if(viewScope.selectedImage != null) {
+										tags = imageRecog.getVisualRecog(viewScope.selectedImage[0], viewScope.selectedImage[1]);
+									}
+									
+									if(null != tags) { 
+										viewScope.watsonTags = tags;
+									}else{
+										println("tag analysis failed");
+									}
+								}]]></xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+
+						<xp:div style="display:inline-block;padding:9px 0px 0px 8px;">
+							Powered by IBM Watson
+						</xp:div>
+					</div>
+
+					<hr id="divider2"></hr>
+					<xp:div id="analysis">
+						<xp:div id="classifierPanel" styleClass="panel panel-primary" rendered="#{javascript:viewScope.watsonTags != null;}">
+							<xp:div styleClass="panel-heading">
+								Image Classifiers
+							</xp:div>
+							<!-- Table -->
+							<xp:table id="classifierTable">
+								<xp:repeat value="#{viewScope.watsonTags}" var="tagInfo">
+									<xp:tr>
+										<xp:td>
+											<xp:text id="classifierName" value="#{javascript:return tagInfo[0];}">
+											</xp:text>
+										</xp:td>
+										<xp:td>
+											<xp:text id="classifierPercent" value="#{javascript:return parseFloat(tagInfo[1]);}">
+												<xp:this.converter>
+													<xp:convertNumber pattern="0.00%">
+													</xp:convertNumber>
+												</xp:this.converter>
+											</xp:text>
+										</xp:td>
+									</xp:tr>
+								</xp:repeat>
+							</xp:table>
+						</xp:div>
+						<xp:panel id="loadingPanel1" styleClass="loadingWatson hidden">
+							<xp:div style="height:100%">
+								<xp:div style="height:100%">
+									<xp:div style="height:100%;text-align:center;">
+										<xp:image url="/watson-loading.gif" id="image5" style="border-radius:110px;opacity:1;margin-top:20%;">
+										</xp:image>
+									</xp:div>
+								</xp:div>
+							</xp:div>
+						</xp:panel>
+					</xp:div>
+				</xp:div>
+			</xp:div>
+		</xp:div>
+	</xc:layout>
+</xp:view>

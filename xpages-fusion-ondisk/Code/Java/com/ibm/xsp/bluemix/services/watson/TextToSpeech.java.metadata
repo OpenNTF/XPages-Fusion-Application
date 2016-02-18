@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="19e" sequence="416" unid="9A22C3C6EA89598680257E8F003DB089">
+<created><datetime dst="true">20150727T121348,89+01</datetime></created>
+<modified><datetime>20160217T125206,22+00</datetime></modified>
+<revised><datetime>20160217T125206,21+00</datetime></revised>
+<lastaccessed><datetime>20160217T125206,22+00</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150811T135002,13+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=admin/O=IBM</name></updatedby>
+<wassignedby><name>CN=admin/O=IBM</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>com/ibm/xsp/bluemix/services/watson/TextToSpeech.java</text></item>
+
+
+
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>com/ibm/xsp/bluemix/services/watson/TextToSpeech.java</text></item></note>

@@ -1,0 +1,27 @@
+applications:
+- services:
+  - sample-fusion-cloudant
+  - sample-fusion-watson-language
+  - sample-fusion-watson-text-speech
+  - sample-fusion-watson-image-recog
+  disk_quota: 1024M
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M
+  env:
+    APP_HOME_URL: /xpagesFusion.nsf
+    APP_PRELOAD_DB: xpagesFusion.nsf
+  
+declared-services:
+  sample-fusion-cloudant:
+    label: cloudantNoSQLDB
+    plan:  Shared
+  sample-fusion-watson-language:
+    label: language_translation
+    plan:  standard
+  sample-fusion-watson-text-speech:
+    label: text_to_speech
+    plan:  standard
+  sample-fusion-watson-image-recog:
+    label: visual_recognition
+    plan:  free

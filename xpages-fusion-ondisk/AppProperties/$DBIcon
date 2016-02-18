@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='80257E9E00467F6F'>
+<noteinfo noteid='166' unid='F6F9B6EC0822C4CA80257E50004C1CE1' sequence='16'>
+<created><datetime dst='true'>20150525T145121,29+01</datetime></created>
+<modified><datetime>20160217T124454,13+00</datetime></modified>
+<revised><datetime>20160217T124454,12+00</datetime></revised>
+<lastaccessed><datetime>20160217T124454,13+00</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150811T135001,85+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name
+>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name><name
+>CN=connectdemo/O=IBM</name><name>CN=admin/O=IBM</name></updatedby>
+<wassignedby><name>CN=admin/O=IBM</name></wassignedby>
+<item name='$TITLE'><text>$DBIcon</text></item>
+<item name='$Flags'><text>34Ci~Q</text></item>
+<item name='$ImagesWide' sign='true'><number>1</number></item>
+<item name='$ImagesHigh' sign='true'><number>1</number></item>
+<item name='$ImagesColorize' sign='true'><number>0</number></item>
+<item name='$FileSize' sign='true'><number>536</number></item>
+<item name='$ImageData' sign='true'>
+<rawitemdata type='1'>
+mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAH0AHAAAAAIAAAAAABgCAAABAAAAAQAAAAAAAAB8
+ACICAAAYAhgCiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAbpJREFUeNrsVctNw0AQNZELMOKOUkLowK4gTgWJKyA5
+ckp84hhSgZMKYiqISzAVYHFHuAN4E72RhvUicQDlsk/arHd3dubNZydRFBAQEBBwYVzZxfvtQ4Jp
+yWV78/ZYcz/FlHK/xn6LvQW+pxiJymPscNbxjpyPMRqez7nuKNcOCPDiEVPO5R0vvNJQg4sZZCp8
+LzwO9RgZCZ5IWgxNPLIzcXDkOSioSFBxJNybQfHEGC+gRJy4pqcid+/oE/m9EJP7JKS6owEBKOwp
+qJdzY6x3xKcglHO/oJGdGxWcy92GKS25n0hqfREQEg1ZK/ZaD8ydngm5IxR9yiw51twatI7u2iz9
+BFiMNm8591RJwfooTZGJfMX6+DViVriGStmuDYGeua1YA2OtAchvDOGKEVkwHbYGrHOpjU6MnxMX
+4klGAX2KJQlsGYUlw7+mMiH95DjVOeuEUTnQkbVx+PsrMJ5oH9jQQG0iIzJqdMv8f5hiXXkI5XT0
+aCJyjlJsqrLjuz1ow3Ge5ouGFKRWMPxsmsugETkECpLXRnRgoQ8b0V/BNKJz8/pJbnTp/4L4H3W3
+vj4QEBAQ4OJLgAEAbqC4Viix8+gAAAAASUVORK5CYII=
+</rawitemdata></item>
+<item name='$MimeType' sign='true'><text>image/png</text></item>
+<item name='$FileModDT' sign='true'><datetime dst='true'>20150515T085308,00+01</datetime></item>
+<item name='$ImageNames' sign='true'><text>C:\Users\IBM_ADMIN\Desktop\Bluemix\images\xpagesIcons\xpagesText_32x32.png</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item></note>
+

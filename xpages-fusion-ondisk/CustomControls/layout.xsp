@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xe:applicationLayout id="applicationLayout2">
+		<xp:this.facets>
+			<xe:navigator id="navigator1" xp:key="LeftColumn"
+				expandable="true">
+				<xe:this.treeNodes>
+					<xe:pageTreeNode page="/home.xsp" label="Home">
+					</xe:pageTreeNode>
+					<xe:basicContainerNode label="Database Services">
+						<xe:this.children>
+							<xe:pageTreeNode label="Cloudant" page="/cloudant.xsp">
+							</xe:pageTreeNode>
+						</xe:this.children>
+					</xe:basicContainerNode>
+					<xe:basicContainerNode label="Watson Services">
+						<xe:this.children>
+							<xe:pageTreeNode page="/textToSpeech.xsp" label="Text To Speech">
+							</xe:pageTreeNode>
+							<xe:pageTreeNode page="/translation.xsp" label="Text Translation">
+							</xe:pageTreeNode>
+							<xe:pageTreeNode page="/imageRecog.xsp" label="Image Recognition">
+							</xe:pageTreeNode>
+						</xe:this.children>
+					</xe:basicContainerNode>
+				</xe:this.treeNodes>
+			</xe:navigator>
+		</xp:this.facets>
+		<xe:this.configuration>
+			<xe:simpleResponsiveConfiguration fixedNavbar="fixed-top"
+				navbarText="XPages Bluemix Fusion" pageWidth="fluid"
+				collapsedLeftMenuLabel="Demos" collapseLeftColumn="true"
+				collapseLeftTarget=".applayout-banner-collapse"
+				invertedNavbar="true" navbar="true">
+			</xe:simpleResponsiveConfiguration>
+		</xe:this.configuration>
+		<xp:callback id="contentPanel"></xp:callback>
+	</xe:applicationLayout>
+</xp:view>

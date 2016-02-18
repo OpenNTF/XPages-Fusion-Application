@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="22a" sequence="4" unid="F425A2D34426CCE780257F240072DAEF">
+<created><datetime>20151223T205431,51+00</datetime></created>
+<modified><datetime>20160126T220101,35+00</datetime></modified>
+<revised><datetime>20160126T220101,34+00</datetime></revised>
+<lastaccessed><datetime>20160126T220101,35+00</datetime></lastaccessed>
+<addedtofile><datetime>20151223T205431,56+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name></updatedby>
+<item name="$TITLE"><text>watson_avatar.png</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+
+
+
+
+
+
+<item name="$MimeType" sign="true"><text>image/png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20151208T145320,47+00</datetime></item>
+<item name="$ImageNames" sign="true"><text>watson_avatar.png</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>

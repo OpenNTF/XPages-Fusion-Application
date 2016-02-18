@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="false">
+	<xp:this.beforeRenderResponse><![CDATA[#{javascript:
+		var audio;
+		var outputStream;
+		try{
+			if(sessionScope.audioText) {
+				//Increment the number of times this code is loaded
+				sessionScope.loadCount++;
+				var text = sessionScope.audioText;
+				var voice = sessionScope.audioVoice;
+				audio = textToSpeech.getSpeech(text, voice);
+				
+				// Get the output stream
+				var extContext   = facesContext.getExternalContext();
+				var response     = extContext.getResponse();
+				outputStream     = response.getOutputStream();
+				
+				if (outputStream != null) {
+					// Set the MIME Type to audio/ogg
+					response.setContentType("audio/ogg");
+					response.setHeader("Cache-Control", "no-cache");
+					audio.returnResponse().getEntity().writeTo(outputStream);
+				}
+				
+				// Stop the page from further processing;
+				facesContext.responseComplete();
+				outputStream.close();
+				
+				if(sessionScope.loadCount > 1) {
+					//It takes 2 times to get the audio to play
+					//Clear the text after finished playing the audio
+					sessionScope.audioText = null;
+				}
+			}
+		}finally{
+			if(null != outputStream) {
+				outputStream.close();
+			}	
+		}}]]>
+	</xp:this.beforeRenderResponse>
+</xp:view>
