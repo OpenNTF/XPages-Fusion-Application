@@ -16,7 +16,7 @@ The procedure to use the above “Deploy to Bluemix” button is as follows:
 
 Now sit back and relax as Bluemix will do the rest. It will do the following automatically:
 
- - Create a new repository on http://jazz.hub.net associated with your Bluemix account
+ - Create a new repository on http://hub.jazz.net associated with your Bluemix account
  - Clone the XPages Fusion Application repository there
  - Configure the build pipeline of that repository
  - Create a new XPages application in your Bluemix organization
