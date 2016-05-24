@@ -98,6 +98,9 @@ public class BluemixContextUtil {
 			}
 			
 			String apiKey = (String) credentials.get("apikey");
+			if(StringUtil.isEmpty(apiKey)) {
+				apiKey = (String) credentials.get("api_key");
+			}
 			if(StringUtil.isNotEmpty(apiKey)) {
 				setApiKey(apiKey);
 			}
