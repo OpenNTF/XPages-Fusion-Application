@@ -236,4 +236,8 @@ public class Cloudant {
 	public String getBaseUrl() {
 		return bluemixUtil.getBaseUrl();
 	}
+	
+	public String getHost() {
+		return bluemixUtil.getHost();
+	}
 }

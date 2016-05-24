@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="2be" sequence="5" unid="E2857D7CC4BCF96580257F41007228C7">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.6" replicaid="80257F5D0060F318" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1e2" sequence="17" unid="E2857D7CC4BCF96580257F41007228C7">
 <created><datetime>20160121T204655,43+00</datetime></created>
-<modified><datetime>20160126T220101,07+00</datetime></modified>
-<revised><datetime>20160126T220101,06+00</datetime></revised>
-<lastaccessed><datetime>20160126T220101,07+00</datetime></lastaccessed>
-<addedtofile><datetime>20160121T204655,44+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name></updatedby>
+<modified><datetime>20160218T173858,09+00</datetime></modified>
+<revised><datetime>20160217T124453,70+00</datetime></revised>
+<lastaccessed><datetime>20160218T173858,09+00</datetime></lastaccessed>
+<addedtofile><datetime>20160218T173858,09+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=admin/O=IBM</name></updatedby>
+<wassignedby><name>CN=admin/O=IBM</name></wassignedby>
 <item name="$TITLE"><text>httpcore-4.3.3.jar</text></item>
 <item name="$DesignerVersion" sign="true"><text>8.5.3</text></item>
 <item name="$Flags"><text>34567Cg~,</text></item>

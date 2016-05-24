@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='80257E9E00467F6F'>
-<noteinfo noteid='262' unid='AF44E61AE28F44F180257F25005E3858' sequence='16'>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.6'
+ replicaid='80257F5D0060F318'>
+<noteinfo noteid='1d2' unid='AF44E61AE28F44F180257F25005E3858' sequence='16'>
 <created><datetime>20151224T170908,08+00</datetime></created>
-<modified><datetime>20160217T124453,20+00</datetime></modified>
+<modified><datetime>20160218T173858,01+00</datetime></modified>
 <revised><datetime>20160217T124453,19+00</datetime></revised>
-<lastaccessed><datetime>20160217T124453,20+00</datetime></lastaccessed>
-<addedtofile><datetime>20151224T170908,15+00</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime>20160218T173858,01+00</datetime></lastaccessed>
+<addedtofile><datetime>20160218T173858,01+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=admin/O=IBM</name><name>CN=XPages/O=Bluemix</name><name
 >CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name
 >CN=admin/O=IBM</name></updatedby>
