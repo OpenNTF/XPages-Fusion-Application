@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1a2" sequence="110" unid="39196F888D569A4E80257E8F003DD0A9">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.6" replicaid="80257F5D0060F318" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="18a" sequence="124" unid="39196F888D569A4E80257E8F003DD0A9">
 <created><datetime dst="true">20150727T121511,13+01</datetime></created>
-<modified><datetime>20160126T220100,90+00</datetime></modified>
-<revised><datetime>20160126T220100,89+00</datetime></revised>
-<lastaccessed><datetime>20160126T220100,90+00</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150811T135002,15+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name></updatedby>
+<modified><datetime dst="true">20160524T181259,08+01</datetime></modified>
+<revised><datetime dst="true">20160524T181259,07+01</datetime></revised>
+<lastaccessed><datetime dst="true">20160524T181259,08+01</datetime></lastaccessed>
+<addedtofile><datetime>20160218T173857,65+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=admin/O=IBM</name></updatedby>
+<wassignedby><name>CN=admin/O=IBM</name></wassignedby>
 <item name="$Flags"><text>34567Cg~[</text></item>
 <item name="$TITLE"><text>com/ibm/xsp/bluemix/util/BluemixContextUtil.java</text></item>
 
-<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item>
 
 
-<item name="$FileNames" sign="true"><text>com/ibm/xsp/bluemix/util/BluemixContextUtil.java</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-</note>
+
+<item name="$FileNames" sign="true"><text>com/ibm/xsp/bluemix/util/BluemixContextUtil.java</text></item></note>

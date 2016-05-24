@@ -105,7 +105,6 @@
 												var imageName = keyArray[0];
 												
 												viewScope.bookImageUrl = cloudant.getBaseUrl() + "/booklist/" + rowData.get("_id") + "/" + imageName;
-												println("url: " + viewScope.bookImageUrl);
 												dialog.show();
 											}
 										}]]></xp:this.action>
@@ -127,7 +126,7 @@
 									<xp:this.style><![CDATA[#{javascript:
 										var isRead = rowData.get("read");
 										
-										if(isRead) {
+										if(isRead === true) {
 											return "font-size:16px;color:#5cb85c;";
 										}else{
 											return "font-size:16px;color:#eee;";
@@ -260,7 +259,7 @@
 				</div>
 			</xp:div>
 			<xe:dialog id="imageDialog" keepComponents="false" title="Book Cover"
-				style="width:400px;height:600px;text-align:center;vertical-align:middle;">
+				style="height:600px;text-align:center;vertical-align:middle;">
 				<xp:image id="bookImage" style="max-width:380px;max-height:540px;padding:10px;">
 					<xp:this.url><![CDATA[#{javascript:
 						println("bookImageUrl: " + bookImageUrl);

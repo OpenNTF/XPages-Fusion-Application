@@ -155,7 +155,7 @@
 									
 									//Send the image to Watson to analyse and return matching classifiers (tags)
 									if(viewScope.selectedImage != null) {
-										tags = imageRecog.getVisualRecog(viewScope.selectedImage[0], viewScope.selectedImage[1]);
+										tags = imageRecog.getVisualRecog(viewScope.selectedImage[0]);
 									}
 									
 									if(null != tags) { 

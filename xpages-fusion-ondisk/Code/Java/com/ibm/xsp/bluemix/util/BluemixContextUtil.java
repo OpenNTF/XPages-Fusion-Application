@@ -3,6 +3,7 @@ package com.ibm.xsp.bluemix.util;
 import javax.xml.bind.DatatypeConverter;
 
 import com.ibm.commons.Platform;
+import com.ibm.commons.util.StringUtil;
 import com.ibm.commons.util.io.json.JsonException;
 import com.ibm.commons.util.io.json.JsonJavaArray;
 import com.ibm.commons.util.io.json.JsonJavaFactory;
@@ -21,14 +22,24 @@ public class BluemixContextUtil {
 	private String username;
 	private String password;
 	private String baseUrl;
+	private String host;
+	private String apiKey;
 	private String serviceName;
 
 	private String hardcodedUsername;
 	private String hardcodedPassword;
 	private String hardcodedBaseUrl;
+	private String hardcodedApiKey;
 	
 	public BluemixContextUtil(String serviceName) {
 		this(serviceName, null, null, null);
+	}
+
+	public BluemixContextUtil(String serviceName, String apiKey, String baseUrl) {
+		setServiceName(serviceName);
+		setHardcodedBaseUrl(baseUrl);
+		setHardcodedApiKey(apiKey);
+		processVCAPServices();
 	}
 	
 	public BluemixContextUtil(String serviceName, String username, String password, String baseUrl) {
@@ -74,8 +85,22 @@ public class BluemixContextUtil {
 			JsonJavaObject service = (JsonJavaObject) services.get(0);
 			JsonJavaObject credentials = (JsonJavaObject) service.get("credentials");
 			setBaseUrl((String) credentials.get("url"));
-			setUsername((String) credentials.get("username"));
-			setPassword((String) credentials.get("password"));
+
+			String username = (String) credentials.get("username");
+			String password = (String) credentials.get("password");
+			if(StringUtil.isNotEmpty(username) && StringUtil.isNotEmpty(password)) {
+				setUsername(username);
+				setPassword(password);
+			}
+			String host = (String) credentials.get("host");
+			if(StringUtil.isNotEmpty(host)) {
+				setHost(host);
+			}
+			
+			String apiKey = (String) credentials.get("apikey");
+			if(StringUtil.isNotEmpty(apiKey)) {
+				setApiKey(apiKey);
+			}
 		}
 	}
 	
@@ -161,5 +186,34 @@ public class BluemixContextUtil {
 
 	public String getHardcodedBaseUrl() {
 		return hardcodedBaseUrl;
+	}
+
+	public void setHost(String host) {
+		this.host = "https://" + host;
+	}
+
+	public String getHost() {
+		return host;
+	}
+
+	public void setHardcodedApiKey(String hardcodedApiKey) {
+		this.hardcodedApiKey = hardcodedApiKey;
+	}
+
+	public String getHardcodedApiKey() {
+		return hardcodedApiKey;
+	}
+
+	public void setApiKey(String apiKey) {
+		this.apiKey = apiKey;
+	}
+
+	public String getApiKey() {
+		if (BluemixContextManager.getInstance().isRunningOnBluemix()) {
+			return apiKey;
+		} else {
+			// Hardcoded credential for local testing
+			return getHardcodedApiKey();
+		}
 	}
 }

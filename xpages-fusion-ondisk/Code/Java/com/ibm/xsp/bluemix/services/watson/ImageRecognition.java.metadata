@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="80257E9E00467F6F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="206" sequence="306" unid="0DD3773CA3F5ED9D80257F24006BE3B9">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.6" replicaid="80257F5D0060F318" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1aa" sequence="307" unid="0DD3773CA3F5ED9D80257F24006BE3B9">
 <created><datetime>20151223T193826,49+00</datetime></created>
-<modified><datetime>20160217T125217,41+00</datetime></modified>
-<revised><datetime>20160217T125217,40+00</datetime></revised>
-<lastaccessed><datetime>20160217T125217,41+00</datetime></lastaccessed>
-<addedtofile><datetime>20151223T193826,50+00</datetime></addedtofile></noteinfo>
+<modified><datetime>20160218T173857,81+00</datetime></modified>
+<revised><datetime>20160217T125217,78+00</datetime></revised>
+<lastaccessed><datetime>20160218T173857,81+00</datetime></lastaccessed>
+<addedtofile><datetime>20160218T173857,81+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=admin/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=admin/O=IBM</name></updatedby>
 <wassignedby><name>CN=admin/O=IBM</name></wassignedby>
 <item name="$Flags"><text>34567Cg~[</text></item>
 <item name="$TITLE"><text>com/ibm/xsp/bluemix/services/watson/ImageRecognition.java</text></item>
 
-
-
 <item name="$DesignerVersion"><text>8.5.3</text></item>
 
 
-<item name="$FileNames" sign="true"><text>com/ibm/xsp/bluemix/services/watson/ImageRecognition.java</text></item></note>
+<item name="$FileNames" sign="true"><text>com/ibm/xsp/bluemix/services/watson/ImageRecognition.java</text></item>
+
+</note>

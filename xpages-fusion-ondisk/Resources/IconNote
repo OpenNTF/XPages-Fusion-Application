@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
- maintenanceversion='1.5' replicaid='80257E9E00467F6F'>
-<noteinfo noteid='11e' unid='01EFA8EB09D1C00380257DD40039243A' sequence='2'>
+ maintenanceversion='1.6' replicaid='80257F5D0060F318'>
+<noteinfo noteid='11e' unid='01EFA8EB09D1C00380257DD40039243A' sequence='3'>
 <created><datetime>20150121T102408,26+00</datetime></created>
-<modified><datetime>20160123T141526,59+00</datetime></modified>
-<revised><datetime>20160123T141526,58+00</datetime></revised>
-<lastaccessed><datetime>20160123T141526,59+00</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150811T135001,49+01</datetime></addedtofile></noteinfo>
+<modified><datetime>20160218T173858,15+00</datetime></modified>
+<revised><datetime>20160218T173858,14+00</datetime></revised>
+<lastaccessed><datetime>20160218T173858,15+00</datetime></lastaccessed>
+<addedtofile><datetime>20160218T173857,11+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=vcap/O=vcap</name><name>CN=BoilerPlate/O=Bluemix</name><name
->CN=admin/O=IBM</name><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name></updatedby>
-<wassignedby><name>CN=connectdemo/O=IBM</name></wassignedby>
+>CN=admin/O=IBM</name><name>CN=BoilerPlate/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name
+>CN=admin/O=IBM</name></updatedby>
 <item name='IconBitmap' summary='true' sign='true'>
 <rawitemdata type='6'>
 AiAgAQAA///////wD///4Af//8AD//4AAH/8AAA/+AAAH/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAA
@@ -30,7 +30,6 @@ AAAAUEECICABAAD/////+A4DgA==
 <item name='$FlagsNoRefresh' sign='true'><text/></item>
 <item name='$DefaultXPage' sign='true'><text>home.xsp</text></item>
 <item name='$DefaultClientXPage' sign='true'><text>home.xsp</text></item>
-<item name='$Daos' sign='true'><text>0</text></item>
-<item name='$TITLE'><text>IBM XPages Fusion
-</text></item></note>
+<item name='$Daos'><text>0</text></item>
+<item name='$TITLE'><text>IBM XPages Fusion</text></item></note>
 
