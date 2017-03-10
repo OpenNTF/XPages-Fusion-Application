@@ -15,7 +15,7 @@ applications:
 declared-services:
   sample-fusion-cloudant:
     label: cloudantNoSQLDB
-    plan:  Shared
+    plan:  Lite
   sample-fusion-watson-language:
     label: language_translation
     plan:  standard
