@@ -38,7 +38,7 @@ public class ImageRecognition implements Serializable {
 		String apiKey = bluemixUtil.getApiKey();
 		
 		//https on the base url causes an error
-		String getUrl = bluemixUtil.getBaseUrl().replace("https:", "http:") + "/" + CLASSIFY_API + "?url=" + imageUrl + "&api_key=" + apiKey + "&version=" + VERSION;
+		String getUrl = bluemixUtil.getBaseUrl() + "/" + CLASSIFY_API + "?url=" + imageUrl + "&api_key=" + apiKey + "&version=" + VERSION;
 		Response response = rest.get(getUrl);
 		
 		//Convert the response into JSON data

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.6'
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.8'
  replicaid='80257F5D0060F318'>
 <noteinfo noteid='162' unid='F6F9B6EC0822C4CA80257E50004C1CE1' sequence='16'>
 <created><datetime dst='true'>20150525T145121,29+01</datetime></created>

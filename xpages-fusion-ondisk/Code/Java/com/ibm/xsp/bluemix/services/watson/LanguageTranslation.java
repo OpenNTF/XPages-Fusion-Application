@@ -19,7 +19,7 @@ import com.ibm.xsp.bluemix.util.RestUtil;
 public class LanguageTranslation implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public static final String SERVICE_NAME = "language_translation";
+	public static final String SERVICE_NAME = "language_translator";
 	private BluemixContextUtil bluemixUtil;
 	private RestUtil rest;
 	
