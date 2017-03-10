@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.6" replicaid="80257F5D0060F318" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="17e" sequence="866" unid="8891E8C7F2A0A2FF80257E8F003DA2BD">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.8" replicaid="80257F5D0060F318" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="17e" sequence="867" unid="8891E8C7F2A0A2FF80257E8F003DA2BD">
 <created><datetime dst="true">20150727T121313,57+01</datetime></created>
-<modified><datetime dst="true">20160524T181044,14+01</datetime></modified>
-<revised><datetime dst="true">20160524T181044,13+01</datetime></revised>
-<lastaccessed><datetime dst="true">20160524T181044,14+01</datetime></lastaccessed>
+<modified><datetime dst="true">20160524T181259,61+01</datetime></modified>
+<revised><datetime dst="true">20160524T181259,60+01</datetime></revised>
+<lastaccessed><datetime dst="true">20160524T181259,61+01</datetime></lastaccessed>
 <addedtofile><datetime>20160218T173857,59+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=admin/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=admin/O=IBM</name></updatedby>
 <wassignedby><name>CN=admin/O=IBM</name></wassignedby>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.6" replicaid="80257F5D0060F318" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="15e" sequence="148" unid="705AB33E0A1EA55480257DD50063721F">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.8" replicaid="80257F5D0060F318" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="15e" sequence="149" unid="705AB33E0A1EA55480257DD50063721F">
 <created><datetime>20150122T180612,79+00</datetime></created>
-<modified><datetime>20160218T173857,43+00</datetime></modified>
-<revised><datetime>20160217T124453,76+00</datetime></revised>
-<lastaccessed><datetime>20160218T173857,43+00</datetime></lastaccessed>
+<modified><datetime>20170310T154719,47+00</datetime></modified>
+<revised><datetime>20170310T154719,46+00</datetime></revised>
+<lastaccessed><datetime>20170310T154719,47+00</datetime></lastaccessed>
 <addedtofile><datetime>20160218T173857,43+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=admin/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=admin/O=IBM</name></updatedby>
-<wassignedby><name>CN=admin/O=IBM</name></wassignedby>
+<updatedby><name>CN=admin/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=XPages/O=Bluemix</name><name>CN=connectdemo/O=IBM</name><name>CN=admin/O=IBM</name><name>CN=aadmin/O=ecorp</name></updatedby>
+<wassignedby><name>CN=aadmin/O=ecorp</name></wassignedby>
 <item name="$Flags"><text>gC~4;</text></item>
 <item name="$TITLE"><text>layout.xsp</text></item>
 
@@ -17,6 +17,6 @@
 
 
 <item name="$FileNames" sign="true"><text>layout.xsp</text></item>
-<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
 
 </note>

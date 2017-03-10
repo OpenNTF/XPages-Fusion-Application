@@ -19,7 +19,7 @@ public class ImageRecognition implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	public static final String SERVICE_NAME = "watson_vision_combined";
-	public static final String CLASSIFY_API = "v3/classify";
+	public static final String CLASSIFY_API = "/v3/classify";
 	public static final String VERSION = "2016-05-20";
 	
 	private BluemixContextUtil bluemixUtil;
@@ -37,8 +37,7 @@ public class ImageRecognition implements Serializable {
 	public ArrayList<String[]> getVisualRecog(String imageUrl) throws JsonException, URISyntaxException, IOException {
 		String apiKey = bluemixUtil.getApiKey();
 		
-		//https on the base url causes an error
-		String getUrl = bluemixUtil.getBaseUrl().replace("https:", "http:") + "/" + CLASSIFY_API + "?url=" + imageUrl + "&api_key=" + apiKey + "&version=" + VERSION;
+		String getUrl = bluemixUtil.getBaseUrl().replace("https:", "http:") + CLASSIFY_API + "?url=" + imageUrl + "&api_key=" + apiKey + "&version=" + VERSION;
 		Response response = rest.get(getUrl);
 		
 		//Convert the response into JSON data
