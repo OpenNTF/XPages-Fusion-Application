@@ -17,7 +17,7 @@ declared-services:
     label: cloudantNoSQLDB
     plan:  Lite
   sample-fusion-watson-language:
-    label: language_translation
+    label: language_translator
     plan:  standard
   sample-fusion-watson-text-speech:
     label: text_to_speech
